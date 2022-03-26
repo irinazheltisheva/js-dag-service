@@ -17,7 +17,9 @@
     "docs": "typedoc",
     "browser:build": "NODE_ENV=production webpack --mode production",
     "browser:serve": "npm run browser:build && http-server dist/browser --gzip",
-    "browser": "npm run browser:build"
+    "browser": "npm run browser:build",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -96,6 +98,8 @@
     "libp2p-websockets": "^0.13.6",
     "multiaddr": "^7.5.0",
     "multiformats": "^2.3.0",
-    "peer-id": "^0.13.13"
-  }
+    "peer-id": "^0.13.13",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
